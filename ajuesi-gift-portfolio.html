@@ -1,0 +1,1095 @@
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>Ajuesi Edubamo Gift — Virtual Assistant & Customer Support</title>  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">  
+<style>  
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap');  :root{
+--paper: #F2EEE3;
+--paper-card: #FBF9F2;
+--ink: #26241E;
+--ink-soft: #514E42;
+--navy: #1F3A3D;
+--navy-deep: #14282A;
+--ochre: #C1892E;
+--ochre-soft: #E7CFA0;
+--sage: #7C8B6F;
+--rule: #D8D1BE;
+--screen-line: #EEE9DA;
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+
+body{
+margin:0;
+background: var(--paper);
+color: var(--ink);
+font-family: 'IBM Plex Sans', sans-serif;
+font-size: 16px;
+line-height: 1.6;
+}
+
+h1,h2,h3{
+font-family: 'Fraunces', serif;
+font-weight: 500;
+color: var(--navy-deep);
+margin: 0;
+}
+
+.wrap{
+max-width: 760px;
+margin: 0 auto;
+padding: 0 28px;
+}
+.wrap-wide{
+max-width: 920px;
+margin: 0 auto;
+padding: 0 28px;
+}
+
+.binder{ position: relative; }
+.binder::before{
+content:"";
+position:absolute;
+top:0; bottom:0; left:50%;
+transform: translateX(-380px);
+width:1px;
+background: var(--rule);
+}
+@media (max-width: 980px){
+.binder::before{ display:none; }
+}
+
+nav{
+display:flex;
+gap: 2px;
+padding: 18px 28px 0;
+max-width: 920px;
+margin: 0 auto;
+flex-wrap: wrap;
+}
+nav a{
+font-size: 13px;
+letter-spacing: 0.02em;
+color: var(--ink-soft);
+text-decoration:none;
+padding: 8px 14px;
+border: 1px solid var(--rule);
+border-bottom: none;
+border-radius: 6px 6px 0 0;
+background: var(--paper-card);
+}
+nav a:hover{ color: var(--navy-deep); }
+
+header.hero{
+padding: 46px 0 40px;
+border-bottom: 1px solid var(--rule);
+}
+.kicker{
+font-size: 14px;
+color: var(--ochre);
+font-family: 'Fraunces', serif;
+font-style: italic;
+margin-bottom: 10px;
+}
+h1.name{
+font-size: 44px;
+line-height: 1.08;
+letter-spacing: -0.01em;
+}
+.role{
+font-size: 19px;
+color: var(--navy);
+margin-top: 10px;
+font-family: 'Fraunces', serif;
+}
+.tagline{
+max-width: 48ch;
+margin-top: 16px;
+color: var(--ink-soft);
+font-size: 16px;
+}
+.hero-actions{
+margin-top: 26px;
+display:flex;
+gap: 12px;
+flex-wrap: wrap;
+align-items:center;
+}
+.btn{
+display:inline-block;
+background: var(--navy-deep);
+color: var(--paper-card);
+padding: 12px 20px;
+border-radius: 4px;
+text-decoration:none;
+font-size: 14.5px;
+font-weight: 500;
+transition: background 0.15s ease;
+border: none;
+cursor: pointer;
+font-family: 'IBM Plex Sans', sans-serif;
+}
+.btn:hover{ background: var(--navy); }
+.btn-ghost{
+color: var(--navy-deep);
+border: 1px solid var(--navy-deep);
+background: transparent;
+}
+.btn-ghost:hover{ background: rgba(31,58,61,0.06); }
+.btn-small{
+font-size: 12.5px;
+padding: 7px 14px;
+}
+
+section{
+padding: 44px 0;
+border-bottom: 1px solid var(--rule);
+}
+section:last-of-type{ border-bottom: none; }
+
+.section-head{
+display:flex;
+align-items: baseline;
+gap: 12px;
+margin-bottom: 22px;
+}
+.section-num{
+font-family: 'Fraunces', serif;
+font-style: italic;
+color: var(--ochre);
+font-size: 15px;
+}
+h2{ font-size: 26px; }
+.section-intro{
+max-width: 62ch;
+margin: -8px 0 26px;
+color: var(--ink-soft);
+font-size: 15px;
+}
+
+p{ color: var(--ink-soft); }
+
+.about-grid{
+display:grid;
+grid-template-columns: 1.4fr 1fr;
+gap: 32px;
+}
+@media (max-width: 620px){
+.about-grid{ grid-template-columns: 1fr; }
+}
+.fact-card{
+background: var(--paper-card);
+border: 1px solid var(--rule);
+border-radius: 6px;
+padding: 18px 20px;
+}
+.fact-card dt{
+font-size: 12.5px;
+color: var(--ochre);
+margin-bottom: 3px;
+}
+.fact-card dd{
+margin: 0 0 14px 0;
+font-size: 14.5px;
+color: var(--ink);
+}
+.fact-card dd:last-child{ margin-bottom: 0; }
+
+.service-list{
+display:grid;
+grid-template-columns: 1fr 1fr;
+gap: 14px 24px;
+list-style:none;
+padding:0;
+margin:0;
+}
+@media (max-width: 620px){
+.service-list{ grid-template-columns: 1fr; }
+}
+.service-list li{
+padding: 14px 0 14px 22px;
+border-top: 1px solid var(--rule);
+position: relative;
+font-size: 15px;
+color: var(--ink);
+}
+.service-list li::before{
+content:"—";
+position:absolute;
+left:0;
+color: var(--sage);
+}
+
+.tools{
+display:flex;
+flex-wrap:wrap;
+gap: 10px;
+margin-top: 6px;
+}
+.tool-chip{
+border: 1px solid var(--rule);
+background: var(--paper-card);
+padding: 7px 14px;
+border-radius: 100px;
+font-size: 13.5px;
+color: var(--navy-deep);
+display:inline-flex;
+align-items:center;
+gap: 8px;
+}
+.tool-chip i{ color: var(--navy); font-size: 13px; width: 14px; text-align:center; }
+.tools-note{
+margin-top: 16px;
+font-size: 12.5px;
+color: var(--ink-soft);
+opacity: 0.85;
+}
+
+.timeline{ display:flex; flex-direction: column; }
+.role-row{
+display:grid;
+grid-template-columns: 120px 1fr;
+gap: 20px;
+padding: 16px 0;
+border-top: 1px solid var(--rule);
+}
+.role-row:first-child{ border-top:none; }
+@media (max-width: 560px){
+.role-row{ grid-template-columns: 1fr; gap: 6px; }
+}
+.role-when{
+font-size: 12.5px;
+color: var(--ochre);
+font-family: 'Fraunces', serif;
+font-style: italic;
+padding-top: 2px;
+}
+.role-title{
+font-size: 15.5px;
+color: var(--navy-deep);
+font-weight: 600;
+margin-bottom: 3px;
+}
+.role-org{
+font-size: 13px;
+color: var(--ink-soft);
+margin-bottom: 6px;
+}
+.role-desc{
+font-size: 13.5px;
+color: var(--ink-soft);
+margin: 0;
+}
+
+.strengths{
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 16px;
+}
+@media (max-width: 620px){
+.strengths{ grid-template-columns: 1fr; }
+}
+.strength-card{
+background: var(--navy-deep);
+color: var(--paper-card);
+padding: 20px;
+border-radius: 6px;
+}
+.strength-card h3{
+color: var(--ochre-soft);
+font-size: 16px;
+margin-bottom: 8px;
+}
+.strength-card p{
+color: #D9D9CE;
+font-size: 13.5px;
+margin:0;
+}
+
+footer.contact{ padding: 46px 0 60px; }
+.contact-card{
+background: var(--navy-deep);
+border-radius: 10px;
+padding: 36px 32px;
+color: var(--paper-card);
+}
+.contact-card h2{ color: var(--paper-card); }
+.contact-card p{ color: #C9C9BE; }
+.contact-links{
+margin-top: 22px;
+display:flex;
+flex-direction: column;
+gap: 10px;
+}
+.contact-links a{
+color: var(--ochre-soft);
+text-decoration:none;
+font-size: 15px;
+border-bottom: 1px solid rgba(231,207,160,0.3);
+width: fit-content;
+padding-bottom: 2px;
+}
+.contact-links a:hover{ border-color: var(--ochre-soft); }
+
+.fine{
+text-align:center;
+font-size: 12.5px;
+color: var(--ink-soft);
+padding: 22px 0 40px;
+}
+
+/* ---------- Selected Work ---------- */
+.project{
+border: 1px solid var(--rule);
+border-radius: 8px;
+background: var(--paper-card);
+padding: 22px 22px 20px;
+margin-bottom: 22px;
+}
+.project:last-child{ margin-bottom: 0; }
+.sim-tag{
+display:inline-block;
+font-size: 10.5px;
+letter-spacing: 0.06em;
+color: var(--navy-deep);
+background: var(--ochre-soft);
+padding: 4px 10px;
+border-radius: 100px;
+margin-bottom: 12px;
+font-weight: 600;
+}
+.project h3.proj-title{
+font-size: 21px;
+margin-bottom: 14px;
+}
+
+/* device / app frame shared by every mockup */
+.mock-frame{
+background:#fff;
+border: 1px solid var(--rule);
+border-radius: 8px;
+overflow: hidden;
+}
+.mock-bar{
+background: #EDE9DC;
+display:flex;
+align-items:center;
+gap: 6px;
+padding: 8px 12px;
+border-bottom: 1px solid var(--rule);
+}
+.mock-dot{ width:8px; height:8px; border-radius:50%; }
+.dot-r{ background:#D98C77; } .dot-y{ background:#E4C15A; } .dot-g{ background:#8FAE86; }
+.mock-bar .mock-title{
+margin-left: 8px;
+font-size: 11.5px;
+color: var(--ink-soft);
+}
+.mock-body{ padding: 14px; }
+.mock-body.no-pad{ padding: 0; }
+
+.caption{
+margin-top: 10px;
+font-size: 12.5px;
+color: var(--ink-soft);
+text-align:center;
+}
+
+/* generic pills used across mockups */
+.pill{
+display:inline-block;
+font-size: 10.5px;
+padding: 2px 8px;
+border-radius: 100px;
+font-weight: 500;
+white-space: nowrap;
+}
+.pill-navy{ background: var(--navy-deep); color:#fff; }
+.pill-ochre{ background: var(--ochre-soft); color: var(--navy-deep); }
+.pill-sage{ background: #E4E9DF; color: #45523B; }
+.pill-outline{ background:#fff; color: var(--ink-soft); border:1px solid var(--rule); }
+.pill-grey{ background:#EFEBDF; color: var(--ink-soft); }
+
+/* --- email inbox --- */
+.inbox-compare{ display:grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 680px){ .inbox-compare{ grid-template-columns: 1fr; } }
+.inbox-label{
+font-size: 12px;
+font-family: 'Fraunces', serif;
+font-style: italic;
+color: var(--ochre);
+margin-bottom: 8px;
+}
+.mail-row{
+display:flex;
+align-items:center;
+gap: 8px;
+padding: 9px 12px;
+border-bottom: 1px solid var(--screen-line);
+font-size: 11.5px;
+}
+.mail-row:last-child{ border-bottom:none; }
+.mail-dot{ width:6px; height:6px; border-radius:50%; background: var(--ochre); flex-shrink:0; }
+.mail-dot.read{ background: transparent; }
+.mail-from{ width: 74px; flex-shrink:0; color: var(--ink); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.mail-row.unread .mail-from, .mail-row.unread .mail-subj{ font-weight:600; color: var(--navy-deep); }
+.mail-subj{ flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color: var(--ink-soft); }
+.mail-meta{ display:flex; align-items:center; gap:6px; flex-shrink:0; }
+.mail-time{ font-size: 10.5px; color: var(--ink-soft); width:34px; text-align:right; flex-shrink:0; }
+.mail-row.messy .mail-subj{ color: var(--ink-soft); }
+
+/* --- calendar --- */
+.cal-week{ display:grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+@media (max-width: 680px){ .cal-week{ grid-template-columns: repeat(2, 1fr); } }
+.cal-day-head{
+font-size: 11.5px;
+font-weight:600;
+color: var(--navy-deep);
+text-align:center;
+padding-bottom: 8px;
+border-bottom: 1px solid var(--rule);
+margin-bottom: 8px;
+}
+.cal-event{
+border-radius: 5px;
+padding: 6px 8px;
+margin-bottom: 6px;
+font-size: 10.5px;
+line-height: 1.35;
+}
+.ev-meeting{ background: var(--navy-deep); color:#fff; }
+.ev-focus{ background: #E4E9DF; color:#3E4A36; border:1px solid #CBD6C2; }
+.ev-deadline{ background: var(--ochre-soft); color: var(--navy-deep); }
+.ev-break{ background:#fff; color: var(--ink-soft); border:1px dashed var(--rule); }
+.ev-time{ font-weight:600; display:block; margin-bottom:1px; }
+.cal-legend{ display:flex; flex-wrap:wrap; gap:14px; margin-top:14px; font-size:11px; color:var(--ink-soft); }
+.cal-legend span{ display:inline-flex; align-items:center; gap:6px; }
+.legend-swatch{ width:10px; height:10px; border-radius:3px; display:inline-block; }
+
+/* --- spreadsheet --- */
+.sheet-toolbar{
+display:flex; gap:14px; align-items:center;
+padding: 8px 12px; background:#F5F2E8; border-bottom:1px solid var(--rule);
+font-size: 11px; color: var(--ink-soft);
+}
+.sheet-toolbar i{ font-size: 11px; }
+table.sheet{ width:100%; border-collapse:collapse; font-size:11.5px; }
+table.sheet th{
+background: #F5F2E8;
+color: var(--navy-deep);
+text-align:left;
+padding: 8px 10px;
+font-size: 10.5px;
+letter-spacing: 0.02em;
+border-bottom: 1px solid var(--rule);
+white-space:nowrap;
+}
+table.sheet td{
+padding: 8px 10px;
+border-bottom: 1px solid var(--screen-line);
+color: var(--ink);
+white-space:nowrap;
+}
+table.sheet tr:nth-child(even) td{ background: #FBFAF4; }
+.sheet-scroll{ overflow-x:auto; }
+
+/* --- kanban --- */
+.kanban{ display:grid; grid-template-columns: repeat(4,1fr); gap:10px; }
+@media (max-width: 780px){ .kanban{ grid-template-columns: repeat(2,1fr); } }
+.kan-col-head{
+font-size: 11px; font-weight:600; color: var(--navy-deep);
+display:flex; justify-content:space-between; align-items:center;
+padding-bottom:8px; margin-bottom:8px; border-bottom:1px solid var(--rule);
+}
+.kan-count{ background:#EFEBDF; color:var(--ink-soft); font-size:10px; padding:1px 7px; border-radius:100px; }
+.kan-card{
+background:#fff; border:1px solid var(--rule); border-radius:6px;
+padding:9px 10px; margin-bottom:8px; font-size:11px;
+}
+.kan-card .kan-title{ color: var(--ink); font-weight:500; margin-bottom:6px; }
+.kan-card .kan-meta{ display:flex; justify-content:space-between; align-items:center; }
+.kan-due{ font-size:10px; color: var(--ink-soft); }
+
+/* --- travel --- */
+.travel-head{
+display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+padding-bottom:12px; margin-bottom:14px; border-bottom:1px solid var(--rule);
+}
+.travel-head h4{ font-family:'Fraunces',serif; font-size:16px; color:var(--navy-deep); margin:0 0 3px; font-weight:500; }
+.travel-head .sub{ font-size:11.5px; color:var(--ink-soft); }
+.compare-row{ display:grid; grid-template-columns: 90px 1fr auto; gap:10px; align-items:center; padding:7px 0; border-bottom:1px solid var(--screen-line); font-size:11.5px; }
+.compare-row:last-child{ border-bottom:none; }
+.bar-track{ background:#EFEBDF; border-radius:100px; height:6px; overflow:hidden; }
+.bar-fill{ height:100%; background:var(--sage); border-radius:100px; }
+.travel-cols{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px; }
+@media (max-width:680px){ .travel-cols{ grid-template-columns:1fr; } }
+.mini-head{ font-size:11px; font-family:'Fraunces',serif; font-style:italic; color:var(--ochre); margin-bottom:8px; }
+.itin-day{ margin-bottom:10px; }
+.itin-day .d-label{ font-size:11px; font-weight:600; color:var(--navy-deep); margin-bottom:4px; }
+.itin-item{ display:flex; gap:8px; font-size:11px; color:var(--ink-soft); padding:2px 0; }
+.itin-item .t{ width:52px; flex-shrink:0; color:var(--ink); }
+.buffer-note{ background:#F5F2E8; border-left:3px solid var(--ochre); padding:8px 12px; font-size:11px; color:var(--ink-soft); margin-top:10px; border-radius: 0 4px 4px 0; }
+
+/* --- CRM / helpdesk --- */
+.crm-layout{ display:grid; grid-template-columns: 1fr 1.3fr; }
+@media (max-width:680px){ .crm-layout{ grid-template-columns:1fr; } }
+.crm-list{ border-right:1px solid var(--rule); }
+@media (max-width:680px){ .crm-list{ border-right:none; border-bottom:1px solid var(--rule); } }
+.crm-row{ padding:9px 12px; border-bottom:1px solid var(--screen-line); font-size:11px; }
+.crm-row.active{ background:#F5F2E8; }
+.crm-row .crm-top{ display:flex; justify-content:space-between; margin-bottom:3px; }
+.crm-id{ color: var(--ink-soft); font-size:10px; }
+.crm-name{ font-weight:600; color:var(--navy-deep); }
+.crm-subj{ color:var(--ink-soft); font-size:10.5px; }
+.crm-detail{ padding: 14px; font-size:11.5px; }
+.crm-detail .field-row{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom:10px; }
+.crm-detail .field{ font-size:10.5px; color:var(--ink-soft); }
+.crm-detail .field b{ display:block; color:var(--ink); font-size:11.5px; font-weight:500; }
+.crm-msg{ background:#F5F2E8; border-radius:6px; padding:10px; font-size:11px; color:var(--ink-soft); margin-bottom:10px; }
+.stepper{ display:flex; align-items:center; margin-top:12px; flex-wrap:wrap; gap:2px; }
+.step{ font-size:10px; color:var(--ink-soft); padding:5px 9px; background:#EFEBDF; border-radius:100px; }
+.step.done{ background: var(--navy-deep); color:#fff; }
+.step-arrow{ color: var(--rule); font-size:10px; padding:0 2px; }
+
+/* case study details */
+.case{ margin-top: 16px; }
+.case summary{
+cursor:pointer;
+list-style:none;
+font-size: 13px;
+color: var(--navy-deep);
+border: 1px solid var(--navy-deep);
+display:inline-block;
+padding: 8px 16px;
+border-radius: 4px;
+}
+.case summary::-webkit-details-marker{ display:none; }
+.case summary:hover{ background: rgba(31,58,61,0.06); }
+.case[open] summary{ margin-bottom: 14px; }
+.case-grid{
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 16px;
+margin-bottom: 14px;
+}
+@media (max-width:680px){ .case-grid{ grid-template-columns:1fr; } }
+.case-grid h4{
+font-size: 11px;
+color: var(--ochre);
+text-transform: none;
+margin-bottom: 5px;
+font-family: 'IBM Plex Sans', sans-serif;
+font-weight: 600;
+}
+.case-grid p{ font-size: 12.5px; margin:0; color: var(--ink-soft); }
+.case-tools{ display:flex; flex-wrap:wrap; gap:6px; }
+.case-tools .tool-chip{ padding:4px 10px; font-size:11.5px; }
+</style>
+
+</head>  
+<body>  <nav>  
+  <a href="#about">About</a>  
+  <a href="#skills">Approach</a>  
+  <a href="#services">Services</a>  
+  <a href="#tools">Tools</a>  
+  <a href="#work">Selected Work</a>  
+  <a href="#experience">Experience</a>  
+  <a href="#education">Education</a>  
+  <a href="#contact">Contact</a>  
+</nav>  <div class="binder">  
+<div class="wrap-wide">    <header class="hero">  
+    <div class="kicker">Who I am, what I do, how I help</div>  
+    <h1 class="name">Ajuesi Edubamo Gift</h1>  
+    <div class="role">Administrative Virtual Assistant &amp; Customer Support</div>  
+    <p class="tagline">I keep inboxes, calendars, records, and customer conversations organised — so the people I support can focus on the work only they can do. Below are simulated practice projects showing how I approach that work.</p>  
+    <div class="hero-actions">  
+      <a class="btn" href="#contact" data-scroll-target="contact">Get in touch</a>  
+      <a class="btn btn-ghost" href="#work" data-scroll-target="work">See selected work</a>  
+    </div>  
+  </header>    <section id="about">  
+    <div class="section-head">  
+      <span class="section-num">01</span>  
+      <h2>About</h2>  
+    </div>  
+    <div class="about-grid">  
+      <div>  
+        <p>I've spent the past several years in roles that all come down to the same thing: keeping things running for other people. Whether that's confirming a school's book order, handling a customer's request at the till, or hitting a writing deadline with no one checking in on me, I show up organised and I follow through.</p>  
+        <p>I'm looking for remote administrative or customer support work where reliability and clear communication actually matter — and I've built the practice projects below to show, not just tell, how I work.</p>  
+      </div>  
+      <dl class="fact-card">  
+        <dt>Based in</dt>  
+        <dd>Nigeria — working remote</dd>  
+        <dt>Available for</dt>  
+        <dd>Remote, full-time or contract</dd>  
+        <dt>Focus</dt>  
+        <dd>Admin support &amp; customer service</dd>  
+      </dl>  
+    </div>  
+  </section>    <section id="skills">  
+    <div class="section-head">  
+      <span class="section-num">02</span>  
+      <h2>Why work with me</h2>  
+    </div>  
+    <div class="strengths">  
+      <div class="strength-card">  
+        <h3>Proactive, not reactive</h3>  
+        <p>I follow up before I'm asked to. Missed callbacks and stalled requests aren't the standard I work to.</p>  
+      </div>  
+      <div class="strength-card">  
+        <h3>Comfortable under pace</h3>  
+        <p>Retail counters, order deadlines, writing deadlines — I'm used to steady pressure and I don't let it show in the work.</p>  
+      </div>  
+      <div class="strength-card">  
+        <h3>Clear communicator</h3>  
+        <p>By phone, chat, or email — customers and colleagues get a straight, courteous answer from me.</p>  
+      </div>  
+    </div>  
+  </section>    <section id="services">  
+    <div class="section-head">  
+      <span class="section-num">03</span>  
+      <h2>Where I can help</h2>  
+    </div>  
+    <ul class="service-list">  
+      <li>Inbox &amp; calendar management</li>  
+      <li>Customer support — chat, email, phone</li>  
+      <li>Order &amp; sales support</li>  
+      <li>CRM upkeep &amp; data entry</li>  
+      <li>Records &amp; documentation</li>  
+      <li>Research &amp; written content</li>  
+    </ul>  
+  </section>    <section id="tools">  
+    <div class="section-head">  
+      <span class="section-num">04</span>  
+      <h2>Tools &amp; software</h2>  
+    </div>  
+    <div class="tools">  
+      <span class="tool-chip"><i class="fa-solid fa-envelope"></i>Gmail</span>  
+      <span class="tool-chip"><i class="fa-brands fa-google"></i>Google Workspace</span>  
+      <span class="tool-chip"><i class="fa-solid fa-calendar-days"></i>Google Calendar</span>  
+      <span class="tool-chip"><i class="fa-brands fa-google-drive"></i>Google Drive</span>  
+      <span class="tool-chip"><i class="fa-solid fa-file-lines"></i>Google Docs</span>  
+      <span class="tool-chip"><i class="fa-solid fa-table"></i>Google Sheets</span>  
+      <span class="tool-chip"><i class="fa-solid fa-file-excel"></i>Microsoft Excel</span>  
+      <span class="tool-chip"><i class="fa-solid fa-file-word"></i>Microsoft Word</span>  
+      <span class="tool-chip"><i class="fa-brands fa-trello"></i>Trello</span>  
+      <span class="tool-chip"><i class="fa-brands fa-hubspot"></i>HubSpot</span>  
+      <span class="tool-chip"><i class="fa-solid fa-headset"></i>Zendesk</span>  
+      <span class="tool-chip">CRM Systems</span>  
+      <span class="tool-chip">ChatGPT</span>  
+      <span class="tool-chip">Claude</span>  
+      <span class="tool-chip">Gemini</span>  
+      <span class="tool-chip">Gamma</span>  
+    </div>  
+    <p class="tools-note">Logos and product names belong to their respective owners and are shown only to indicate tools I'm comfortable working in — not certification, employment, or partnership.</p>  
+  </section>    <section id="work">  
+    <div class="section-head">  
+      <span class="section-num">05</span>  
+      <h2>Selected work</h2>  
+    </div>  
+    <p class="section-intro">Simulated practice projects demonstrating practical administrative, workflow, data-management, travel-planning, and customer-support skills. All names, messages, and data below are fictional.</p>  <!-- PROJECT 1 — EMAIL -->  
+<div class="project">  
+  <span class="sim-tag">SIMULATED PRACTICE PROJECT</span>  
+  <h3 class="proj-title">Email Management — Inbox Cleanup</h3>  
+
+  <div class="mock-frame">  
+    <div class="mock-bar"><span class="mock-dot dot-r"></span><span class="mock-dot dot-y"></span><span class="mock-dot dot-g"></span><span class="mock-title">Mail</span></div>  
+    <div class="mock-body">  
+      <div class="inbox-compare">  
+        <div>  
+          <div class="inbox-label">Before</div>  
+          <div class="mock-frame">  
+            <div class="mock-body no-pad">  
+              <div class="mail-row messy unread"><span class="mail-dot"></span><span class="mail-from">T. Adeyemi</span><span class="mail-subj">question about the thing</span><span class="mail-time">9:02</span></div>  
+              <div class="mail-row messy"><span class="mail-dot read"></span><span class="mail-from">R. Coker</span><span class="mail-subj">Re: Re: Re: meeting??</span><span class="mail-time">Tue</span></div>  
+              <div class="mail-row messy unread"><span class="mail-dot"></span><span class="mail-from">Newsletter</span><span class="mail-subj">this week's updates</span><span class="mail-time">Tue</span></div>  
+              <div class="mail-row messy unread"><span class="mail-dot"></span><span class="mail-from">B. Okafor</span><span class="mail-subj">URGENT — need this today</span><span class="mail-time">Mon</span></div>  
+              <div class="mail-row messy"><span class="mail-dot read"></span><span class="mail-from">S. Nwosu</span><span class="mail-subj">following up again</span><span class="mail-time">Mon</span></div>  
+              <div class="mail-row messy"><span class="mail-dot read"></span><span class="mail-from">L. Bello</span><span class="mail-subj">thanks!</span><span class="mail-time">Fri</span></div>  
+            </div>  
+          </div>  
+        </div>  
+        <div>  
+          <div class="inbox-label">After</div>  
+          <div class="mock-frame">  
+            <div class="mock-body no-pad">  
+              <div class="mail-row unread"><span class="mail-dot"></span><span class="mail-from">B. Okafor</span><span class="mail-subj">Contract review — needed today</span><span class="mail-meta"><span class="pill pill-navy">Urgent</span></span></div>  
+              <div class="mail-row unread"><span class="mail-dot"></span><span class="mail-from">T. Adeyemi</span><span class="mail-subj">Question on onboarding steps</span><span class="mail-meta"><span class="pill pill-ochre">Client</span></span></div>  
+              <div class="mail-row"><span class="mail-dot read"></span><span class="mail-from">R. Coker</span><span class="mail-subj">Thu 2pm meeting — confirmed</span><span class="mail-meta"><span class="pill pill-sage">Meeting</span></span></div>  
+              <div class="mail-row"><span class="mail-dot read"></span><span class="mail-from">S. Nwosu</span><span class="mail-subj">Follow-up: invoice #— pending</span><span class="mail-meta"><span class="pill pill-outline">Follow-up</span></span></div>  
+              <div class="mail-row"><span class="mail-dot read"></span><span class="mail-from">L. Bello</span><span class="mail-subj">Thank-you note</span><span class="mail-meta"><span class="pill pill-grey">General</span></span></div>  
+              <div class="mail-row"><span class="mail-dot read"></span><span class="mail-from">Newsletter</span><span class="mail-subj">Weekly digest</span><span class="mail-meta"><span class="pill pill-grey">General</span></span></div>  
+            </div>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+  <p class="caption">Before: unsorted, no priority signal. After: labeled by type, flagged by urgency, grouped for action.</p>  
+
+  <details class="case">  
+    <summary>View case study</summary>  
+    <div class="case-grid">  
+      <div><h4>Challenge</h4><p>A cluttered inbox with no labels made it hard to tell which messages needed a same-day reply versus routine correspondence.</p></div>  
+      <div><h4>Work completed</h4><p>Sorted messages into categories (client, meeting, follow-up, urgent, general), flagged priority items, and set up a consistent labeling system.</p></div>  
+      <div><h4>Outcome</h4><p>Urgent and client messages are now visible at a glance, and nothing routine gets mistaken for something time-sensitive.</p></div>  
+    </div>  
+    <div class="case-tools tools">  
+      <span class="tool-chip"><i class="fa-solid fa-envelope"></i>Gmail</span>  
+      <span class="tool-chip"><i class="fa-brands fa-google"></i>Google Workspace</span>  
+    </div>  
+  </details>  
+</div>  
+
+<!-- PROJECT 2 — CALENDAR -->  
+<div class="project">  
+  <span class="sim-tag">SIMULATED PRACTICE PROJECT</span>  
+  <h3 class="proj-title">Calendar Management — Weekly Schedule</h3>  
+
+  <div class="mock-frame">  
+    <div class="mock-bar"><span class="mock-dot dot-r"></span><span class="mock-dot dot-y"></span><span class="mock-dot dot-g"></span><span class="mock-title">Calendar — Week of Mar 9</span></div>  
+    <div class="mock-body">  
+      <div class="cal-week">  
+        <div>  
+          <div class="cal-day-head">MON</div>  
+          <div class="cal-event ev-meeting"><span class="ev-time">9:00</span>Team standup</div>  
+          <div class="cal-event ev-focus"><span class="ev-time">10:00</span>Focus — reports</div>  
+          <div class="cal-event ev-break"><span class="ev-time">12:30</span>Lunch break</div>  
+          <div class="cal-event ev-deadline"><span class="ev-time">3:00</span>Deadline — invoices</div>  
+        </div>  
+        <div>  
+          <div class="cal-day-head">TUE</div>  
+          <div class="cal-event ev-meeting"><span class="ev-time">9:30</span>Client call</div>  
+          <div class="cal-event ev-break"><span class="ev-time">10:30</span>Buffer</div>  
+          <div class="cal-event ev-focus"><span class="ev-time">11:00</span>Focus — inbox zero</div>  
+          <div class="cal-event ev-meeting"><span class="ev-time">2:00</span>Vendor check-in</div>  
+        </div>  
+        <div>  
+          <div class="cal-day-head">WED</div>  
+          <div class="cal-event ev-focus"><span class="ev-time">9:00</span>Focus — data entry</div>  
+          <div class="cal-event ev-break"><span class="ev-time">12:00</span>Lunch break</div>  
+          <div class="cal-event ev-meeting"><span class="ev-time">1:30</span>Team sync</div>  
+          <div class="cal-event ev-break"><span class="ev-time">4:00</span>Buffer</div>  
+        </div>  
+        <div>  
+          <div class="cal-day-head">THU</div>  
+          <div class="cal-event ev-meeting"><span class="ev-time">9:00</span>Client call</div>  
+          <div class="cal-event ev-deadline"><span class="ev-time">11:00</span>Deadline — report due</div>  
+          <div class="cal-event ev-break"><span class="ev-time">12:30</span>Lunch break</div>  
+          <div class="cal-event ev-focus"><span class="ev-time">2:00</span>Focus — follow-ups</div>  
+        </div>  
+        <div>  
+          <div class="cal-day-head">FRI</div>  
+          <div class="cal-event ev-meeting"><span class="ev-time">9:00</span>Team standup</div>  
+          <div class="cal-event ev-focus"><span class="ev-time">10:00</span>Focus — planning</div>  
+          <div class="cal-event ev-break"><span class="ev-time">1:00</span>Buffer</div>  
+          <div class="cal-event ev-meeting"><span class="ev-time">2:30</span>Weekly wrap-up</div>  
+        </div>  
+      </div>  
+      <div class="cal-legend">  
+        <span><span class="legend-swatch" style="background:var(--navy-deep)"></span>Meeting</span>  
+        <span><span class="legend-swatch" style="background:#E4E9DF;border:1px solid #CBD6C2"></span>Focus time</span>  
+        <span><span class="legend-swatch" style="background:var(--ochre-soft)"></span>Deadline</span>  
+        <span><span class="legend-swatch" style="background:#fff;border:1px dashed var(--rule)"></span>Break / buffer</span>  
+      </div>  
+    </div>  
+  </div>  
+
+  <details class="case">  
+    <summary>View case study</summary>  
+    <div class="case-grid">  
+      <div><h4>Challenge</h4><p>A packed week with client calls, internal syncs, and hard deadlines needed room for focused work without back-to-back conflicts.</p></div>  
+      <div><h4>Work completed</h4><p>Built a weekly schedule with dedicated focus blocks, buffer time around calls, and deadlines flagged separately from meetings.</p></div>  
+      <div><h4>Outcome</h4><p>A schedule with visible breathing room — no double-bookings, and deadlines stand out instead of blending into the week.</p></div>  
+    </div>  
+    <div class="case-tools tools">  
+      <span class="tool-chip"><i class="fa-solid fa-calendar-days"></i>Google Calendar</span>  
+    </div>  
+  </details>  
+</div>  
+
+<!-- PROJECT 3 — DATA ENTRY -->  
+<div class="project">  
+  <span class="sim-tag">SIMULATED PRACTICE PROJECT</span>  
+  <h3 class="proj-title">Data Entry &amp; Records Management</h3>  
+
+  <div class="mock-frame">  
+    <div class="mock-bar"><span class="mock-dot dot-r"></span><span class="mock-dot dot-y"></span><span class="mock-dot dot-g"></span><span class="mock-title">Client Tracker — Sheet1</span></div>  
+    <div class="sheet-toolbar">  
+      <span><i class="fa-solid fa-bold"></i></span>  
+      <span><i class="fa-solid fa-italic"></i></span>  
+      <span><i class="fa-solid fa-filter"></i> Filter</span>  
+      <span><i class="fa-solid fa-arrow-down-a-z"></i> Sort</span>  
+    </div>  
+    <div class="sheet-scroll">  
+    <table class="sheet">  
+      <thead><tr><th>#</th><th>Client</th><th>Request type</th><th>Status</th><th>Priority</th><th>Follow-up</th><th>Notes</th></tr></thead>  
+      <tbody>  
+        <tr><td>001</td><td>Adaeze Okonkwo</td><td>Onboarding</td><td><span class="pill pill-sage">In progress</span></td><td><span class="pill pill-outline">Medium</span></td><td>Mar 12</td><td>Awaiting signed form</td></tr>  
+        <tr><td>002</td><td>Fola Martins</td><td>Support request</td><td><span class="pill pill-navy">Open</span></td><td><span class="pill pill-ochre">High</span></td><td>Mar 10</td><td>Escalated to lead</td></tr>  
+        <tr><td>003</td><td>Chidi Eze</td><td>Renewal</td><td><span class="pill pill-grey">Closed</span></td><td><span class="pill pill-outline">Low</span></td><td>—</td><td>Confirmed complete</td></tr>  
+        <tr><td>004</td><td>Grace Ibe</td><td>Billing query</td><td><span class="pill pill-sage">In progress</span></td><td><span class="pill pill-outline">Medium</span></td><td>Mar 11</td><td>Sent statement copy</td></tr>  
+        <tr><td>005</td><td>Emeka Obi</td><td>Onboarding</td><td><span class="pill pill-navy">Open</span></td><td><span class="pill pill-ochre">High</span></td><td>Mar 9</td><td>Docs incomplete</td></tr>  
+        <tr><td>006</td><td>Ngozi Uche</td><td>Support request</td><td><span class="pill pill-grey">Closed</span></td><td><span class="pill pill-outline">Low</span></td><td>—</td><td>Resolved same day</td></tr>  
+      </tbody>  
+    </table>  
+    </div>  
+  </div>  
+
+  <details class="case">  
+    <summary>View case study</summary>  
+    <div class="case-grid">  
+      <div><h4>Challenge</h4><p>Client requests were scattered across notes and messages, with no single place to see status, priority, or what needed following up.</p></div>  
+      <div><h4>Work completed</h4><p>Built a structured tracker with status and priority fields, follow-up dates, and short notes per record, formatted for quick filtering.</p></div>  
+      <div><h4>Outcome</h4><p>Every open request is visible in one place, sorted by what needs attention first.</p></div>  
+    </div>  
+    <div class="case-tools tools">  
+      <span class="tool-chip"><i class="fa-solid fa-table"></i>Google Sheets</span>  
+      <span class="tool-chip"><i class="fa-solid fa-file-excel"></i>Microsoft Excel</span>  
+    </div>  
+  </details>  
+</div>  
+
+<!-- PROJECT 4 — KANBAN -->  
+<div class="project">  
+  <span class="sim-tag">SIMULATED PRACTICE PROJECT</span>  
+  <h3 class="proj-title">Task &amp; Project Management — Weekly Board</h3>  
+
+  <div class="mock-frame">  
+    <div class="mock-bar"><span class="mock-dot dot-r"></span><span class="mock-dot dot-y"></span><span class="mock-dot dot-g"></span><span class="mock-title">Admin Workflow Board</span></div>  
+    <div class="mock-body">  
+      <div class="kanban">  
+        <div>  
+          <div class="kan-col-head">To Do <span class="kan-count">3</span></div>  
+          <div class="kan-card"><div class="kan-title">Schedule client meeting</div><div class="kan-meta"><span class="pill pill-outline">Meetings</span><span class="kan-due">Mar 11</span></div></div>  
+          <div class="kan-card"><div class="kan-title">Organize shared drive folders</div><div class="kan-meta"><span class="pill pill-outline">Docs</span><span class="kan-due">Mar 13</span></div></div>  
+          <div class="kan-card"><div class="kan-title">Draft weekly report template</div><div class="kan-meta"><span class="pill pill-outline">Reports</span><span class="kan-due">Mar 14</span></div></div>  
+        </div>  
+        <div>  
+          <div class="kan-col-head">In Progress <span class="kan-count">2</span></div>  
+          <div class="kan-card"><div class="kan-title">Respond to customer email backlog</div><div class="kan-meta"><span class="pill pill-ochre">High</span><span class="kan-due">Mar 10</span></div></div>  
+          <div class="kan-card"><div class="kan-title">Update client spreadsheet</div><div class="kan-meta"><span class="pill pill-outline">Data</span><span class="kan-due">Mar 11</span></div></div>  
+        </div>  
+        <div>  
+          <div class="kan-col-head">Ready for Review <span class="kan-count">1</span></div>  
+          <div class="kan-card"><div class="kan-title">Prepare weekly summary report</div><div class="kan-meta"><span class="pill pill-sage">Reports</span><span class="kan-due">Mar 9</span></div></div>  
+        </div>  
+        <div>  
+          <div class="kan-col-head">Completed <span class="kan-count">2</span></div>  
+          <div class="kan-card"><div class="kan-title">Follow up on pending invoice</div><div class="kan-meta"><span class="pill pill-grey">Done</span><span class="kan-due">Mar 7</span></div></div>  
+          <div class="kan-card"><div class="kan-title">Confirm vendor appointment</div><div class="kan-meta"><span class="pill pill-grey">Done</span><span class="kan-due">Mar 6</span></div></div>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+
+  <details class="case">  
+    <summary>View case study</summary>  
+    <div class="case-grid">  
+      <div><h4>Challenge</h4><p>A week's worth of admin tasks needed a shared, visible structure instead of living across separate notes and messages.</p></div>  
+      <div><h4>Work completed</h4><p>Set up a four-stage board and moved tasks through it daily, tagging each card by type and due date.</p></div>  
+      <div><h4>Outcome</h4><p>A clear, glanceable view of what's outstanding, in motion, and finished — with nothing falling through the cracks.</p></div>  
+    </div>  
+    <div class="case-tools tools">  
+      <span class="tool-chip"><i class="fa-brands fa-trello"></i>Trello</span>  
+    </div>  
+  </details>  
+</div>  
+
+<!-- PROJECT 5 — TRAVEL -->  
+<div class="project">  
+  <span class="sim-tag">SIMULATED PRACTICE PROJECT</span>  
+  <h3 class="proj-title">Travel Planning — Business Trip Itinerary</h3>  
+
+  <div class="mock-frame">  
+    <div class="mock-bar"><span class="mock-dot dot-r"></span><span class="mock-dot dot-y"></span><span class="mock-dot dot-g"></span><span class="mock-title">Travel Planner — Lagos to Nairobi</span></div>  
+    <div class="mock-body">  
+      <div class="travel-head">  
+        <div>  
+          <h4>Lagos → Nairobi</h4>  
+          <div class="sub">3-day client visit · Mar 17–19 · GMT+1 → GMT+3 (2hr ahead)</div>  
+        </div>  
+      </div>  
+
+      <div class="mini-head">Flight options</div>  
+      <div class="compare-row"><span>Airline A</span><div class="bar-track"><div class="bar-fill" style="width:60%"></div></div><span class="pill pill-outline">Lower cost</span></div>  
+      <div class="compare-row"><span>Airline B</span><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div><span class="pill pill-ochre">Fastest</span></div>  
+      <div class="compare-row"><span>Airline C</span><div class="bar-track"><div class="bar-fill" style="width:75%"></div></div><span class="pill pill-sage">Best balance</span></div>  
+
+      <div class="travel-cols">  
+        <div>  
+          <div class="mini-head">Accommodation options</div>  
+          <div class="compare-row"><span>Hotel A</span><span style="color:var(--ink-soft)">10 min to meetings</span><span class="pill pill-sage">Closest</span></div>  
+          <div class="compare-row"><span>Hotel B</span><span style="color:var(--ink-soft)">Airport shuttle incl.</span><span class="pill pill-outline">Convenient</span></div>  
+        </div>  
+        <div>  
+          <div class="mini-head">Daily itinerary</div>  
+          <div class="itin-day">  
+            <div class="d-label">Day 1</div>  
+            <div class="itin-item"><span class="t">10:00</span>Arrive, airport transfer</div>  
+            <div class="itin-item"><span class="t">14:00</span>Buffer / rest</div>  
+          </div>  
+          <div class="itin-day">  
+            <div class="d-label">Day 2</div>  
+            <div class="itin-item"><span class="t">9:00</span>Client meetings</div>  
+            <div class="itin-item"><span class="t">13:00</span>Working lunch</div>  
+          </div>  
+        </div>  
+      </div>  
+      <div class="buffer-note">Buffer time built in after arrival and before departure to allow for time-zone adjustment and transfer delays.</div>  
+    </div>  
+  </div>  
+
+  <details class="case">  
+    <summary>View case study</summary>  
+    <div class="case-grid">  
+      <div><h4>Challenge</h4><p>A short business trip needed flight and hotel options weighed against cost, time, and proximity to meetings — with no room for tight connections.</p></div>  
+      <div><h4>Work completed</h4><p>Compared flight and accommodation options qualitatively, built a day-by-day itinerary, and flagged time-zone shift and buffer periods.</p></div>  
+      <div><h4>Outcome</h4><p>A clear, one-page plan the traveller can follow without re-checking multiple sources.</p></div>  
+    </div>  
+    <div class="case-tools tools">  
+      <span class="tool-chip"><i class="fa-solid fa-table"></i>Google Sheets</span>  
+      <span class="tool-chip"><i class="fa-solid fa-calendar-days"></i>Google Calendar</span>  
+    </div>  
+  </details>  
+</div>  
+
+<!-- PROJECT 6 — CRM -->  
+<div class="project">  
+  <span class="sim-tag">SIMULATED PRACTICE PROJECT</span>  
+  <h3 class="proj-title">Customer Support &amp; CRM — Ticket Handling</h3>  
+
+  <div class="mock-frame">  
+    <div class="mock-bar"><span class="mock-dot dot-r"></span><span class="mock-dot dot-y"></span><span class="mock-dot dot-g"></span><span class="mock-title">Helpdesk — Open Tickets</span></div>  
+    <div class="crm-layout">  
+      <div class="crm-list">  
+        <div class="crm-row active">  
+          <div class="crm-top"><span class="crm-name">J. Adebayo</span><span class="crm-id">#1042</span></div>  
+          <div class="crm-subj">Order arrived damaged</div>  
+          <div class="mail-meta" style="margin-top:4px"><span class="pill pill-ochre">High</span> <span class="pill pill-navy">Open</span></div>  
+        </div>  
+        <div class="crm-row">  
+          <div class="crm-top"><span class="crm-name">P. Kalu</span><span class="crm-id">#1041</span></div>  
+          <div class="crm-subj">Question about refund policy</div>  
+          <div class="mail-meta" style="margin-top:4px"><span class="pill pill-outline">Medium</span> <span class="pill pill-sage">In progress</span></div>  
+        </div>  
+        <div class="crm-row">  
+          <div class="crm-top"><span class="crm-name">M. Yusuf</span><span class="crm-id">#1040</span></div>  
+          <div class="crm-subj">Delivery delay follow-up</div>  
+          <div class="mail-meta" style="margin-top:4px"><span class="pill pill-outline">Medium</span> <span class="pill pill-grey">Waiting</span></div>  
+        </div>  
+        <div class="crm-row">  
+          <div class="crm-top"><span class="crm-name">C. Effiong</span><span class="crm-id">#1039</span></div>  
+          <div class="crm-subj">Account access issue</div>  
+          <div class="mail-meta" style="margin-top:4px"><span class="pill pill-grey">Low</span> <span class="pill pill-grey">Resolved</span></div>  
+        </div>  
+      </div>  
+      <div class="crm-detail">  
+        <div class="field-row">  
+          <div class="field">Customer<br><b>J. Adebayo</b></div>  
+          <div class="field">Category<br><b>Order issue</b></div>  
+          <div class="field">Assigned to<br><b>A. Gift</b></div>  
+        </div>  
+        <div class="crm-msg">"The package arrived with a cracked case — requesting a replacement before the weekend if possible."</div>  
+        <div class="crm-msg" style="background:#fff;border:1px solid var(--rule)">Response drafted: apology, replacement confirmed, expedited shipping arranged, tracking to follow within 24 hours.</div>  
+        <div class="stepper">  
+          <span class="step done">Request received</span><span class="step-arrow">→</span>  
+          <span class="step done">Categorised</span><span class="step-arrow">→</span>  
+          <span class="step done">Responded</span><span class="step-arrow">→</span>  
+          <span class="step">Follow-up</span><span class="step-arrow">→</span>  
+          <span class="step">Resolved</span>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+
+  <details class="case">  
+    <summary>View case study</summary>  
+    <div class="case-grid">  
+      <div><h4>Challenge</h4><p>Incoming support requests varied widely in urgency, and needed a consistent path from first contact to resolution.</p></div>  
+      <div><h4>Work completed</h4><p>Logged and categorised tickets by issue type and priority, drafted responses, and tracked each through to follow-up or escalation.</p></div>  
+      <div><h4>Outcome</h4><p>A repeatable, visible process — customers get a timely response, and nothing sits unanswered.</p></div>  
+    </div>  
+    <div class="case-tools tools">  
+      <span class="tool-chip"><i class="fa-brands fa-hubspot"></i>HubSpot</span>  
+      <span class="tool-chip"><i class="fa-solid fa-headset"></i>Zendesk</span>  
+    </div>  
+  </details>  
+</div>
+
+  </section>    <section id="experience">  
+    <div class="section-head">  
+      <span class="section-num">06</span>  
+      <h2>Experience</h2>  
+    </div>  
+    <div class="timeline">  
+      <div class="role-row">  
+        <div class="role-when">2024 – 2025</div>  
+        <div>  
+          <div class="role-title">Freelance Story Writer</div>  
+          <div class="role-org">Amazon Kindle Vella · Remote</div>  
+          <p class="role-desc">Wrote and published original content independently, managing research and deadlines with no direct oversight.</p>  
+        </div>  
+      </div>  
+      <div class="role-row">  
+        <div class="role-when">2022 – 2023</div>  
+        <div>  
+          <div class="role-title">Sales Assistant</div>  
+          <div class="role-org">Malika Bakery</div>  
+          <p class="role-desc">Handled production and sales operations, including labeling and organising stock for daily service.</p>  
+        </div>  
+      </div>  
+      <div class="role-row">  
+        <div class="role-when">2021 – 2022</div>  
+        <div>  
+          <div class="role-title">Customer Service &amp; Sales Support</div>  
+          <div class="role-org">Goodwill Restaurant</div>  
+          <p class="role-desc">Managed sales transactions and customer requests, supporting orders on the floor and at the till.</p>  
+        </div>  
+      </div>  
+      <div class="role-row">  
+        <div class="role-when">2018 – 2020</div>  
+        <div>  
+          <div class="role-title">Bookshop Assistant</div>  
+          <div class="role-org">Ayoade Bookshop</div>  
+          <p class="role-desc">Ordered and received stock, kept records, and coordinated school contract orders by phone and message.</p>  
+        </div>  
+      </div>  
+    </div>  
+  </section>    <section id="education">  
+    <div class="section-head">  
+      <span class="section-num">07</span>  
+      <h2>Education &amp; training</h2>  
+    </div>  
+    <dl class="fact-card" style="max-width:420px">  
+      <dt>Degree</dt>  
+      <dd>B.Sc. Political Science &amp; Education, Tai Solarin University of Education (TASUED)</dd>  
+      <dt>Currently learning</dt>  
+      <dd>IBM Web Development course (in progress)</dd>  
+    </dl>  
+  </section>    <footer class="contact" id="contact">  
+    <div class="contact-card">  
+      <h2>Let's work together</h2>  
+      <p>Open to remote administrative and customer service roles — happy to talk through what you need.</p>  
+      <div class="contact-links">  
+        <a href="mailto:edubamogift1@gmail.com">edubamogift1@gmail.com</a>  
+        <a href="tel:+2347018865863">+234 701 886 5863</a>  
+        <a href="https://www.linkedin.com/in/ajuesi-gift-5b0967404" target="_blank" rel="noopener">linkedin.com/in/ajuesi-gift-5b0967404</a>  
+      </div>  
+    </div>  
+  </footer>    <div class="fine">Ajuesi Edubamo Gift — Portfolio</div>  </div>  
+</div>  <script>  
+  document.querySelectorAll('[data-scroll-target]').forEach(function(link){  
+    link.addEventListener('click', function(e){  
+      var targetId = link.getAttribute('data-scroll-target');  
+      var target = document.getElementById(targetId);  
+      if (target) {  
+        e.preventDefault();  
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });  
+      }  
+    });  
+  });  
+</script>  </body>  
+</html>
